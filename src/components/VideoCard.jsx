@@ -82,7 +82,7 @@ const VideoCard = ({ video, onClick }) => {
           */}
           <video
             ref={metaRef}
-            src={video.videoUrl}
+            src={`https://socially-approved-backend.onrender.com/${video.videoUrl}`}
             preload="metadata"
             style={{ display: 'none' }}
             tabIndex={-1}
