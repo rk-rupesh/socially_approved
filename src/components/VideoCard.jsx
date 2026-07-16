@@ -94,7 +94,7 @@ const VideoCard = ({ video, onClick }) => {
             <video
               ref={videoRef}
               className="video-card-preview"
-              src={video.videoUrl}
+              src={`https://socially-approved-backend.onrender.com/${video.videoUrl}`}
               muted
               loop
               playsInline
