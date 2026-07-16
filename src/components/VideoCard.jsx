@@ -82,7 +82,7 @@ const VideoCard = ({ video, onClick }) => {
           */}
           <video
             ref={metaRef}
-            src={`https://socially-approved-backend.onrender.com/${video.videoUrl}`}
+            src={`https://socially-approved-backend.onrender.com${video.videoUrl}`}
             preload="metadata"
             style={{ display: 'none' }}
             tabIndex={-1}
@@ -94,7 +94,7 @@ const VideoCard = ({ video, onClick }) => {
             <video
               ref={videoRef}
               className="video-card-preview"
-              src={`https://socially-approved-backend.onrender.com/${video.videoUrl}`}
+              src={`https://socially-approved-backend.onrender.com${video.videoUrl}`}
               muted
               loop
               playsInline
