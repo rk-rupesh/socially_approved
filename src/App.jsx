@@ -19,7 +19,7 @@ const App = () => {
       try {
         setLoading(true);
         // Use relative URL proxy defined in vite.config.js
-        const response = await fetch('/api/videos');
+        const response = await fetch('https://socially-approved-backend.onrender.com/api/videos');
         if (!response.ok) {
           throw new Error(`Error: ${response.statusText}`);
         }
@@ -71,7 +71,7 @@ const App = () => {
     );
 
     try {
-      const response = await fetch(`/api/videos/${id}/like`, {
+      const response = await fetch(`https://socially-approved-backend.onrender.com/api/videos/${id}/like`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ isLiked: nextLikedState })
@@ -136,7 +136,7 @@ const App = () => {
 
     // 3. Post share tracking to backend
     try {
-      const response = await fetch(`/api/videos/${id}/share`, {
+      const response = await fetch(`https://socially-approved-backend.onrender.com/api/videos/${id}/share`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ platform: 'CopyLink' })
@@ -157,7 +157,7 @@ const App = () => {
 
   const handleComment = async (id, text, username) => {
     try {
-      const response = await fetch(`/api/videos/${id}/comment`, {
+      const response = await fetch(`https://socially-approved-backend.onrender.com/api/videos/${id}/comment`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, text })
