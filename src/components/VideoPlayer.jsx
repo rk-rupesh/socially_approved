@@ -148,7 +148,7 @@ const VideoPlayer = ({ video, isActive, isMutedGlobal, onMuteToggle }) => {
         key={video.videoUrl}
         ref={videoRef}
         className="player-video-element"
-        src={video.videoUrl}
+        src={`https://socially-approved-backend.onrender.com${video.videoUrl}`}
         loop
         playsInline
         preload={isActive ? "auto" : "metadata"}
